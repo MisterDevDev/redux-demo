@@ -1,9 +1,16 @@
-import React from 'react';
+import React from "react";
 
-const dog = ({ tag }) => {
-    return (
-        <div>
-            {tag}
-        </div>
-    )
-}
+const Dog = ({ id, createNote }) => {
+  return (
+    <div key={id}>
+      <div>
+        Dog #:
+        <br />
+        {id.slice(0, 8)}
+      </div>
+      <button onClick={() => createNote(id)}>Create Note</button>
+    </div>
+  );
+};
+
+export default Dog
